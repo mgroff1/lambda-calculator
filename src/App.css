@@ -1,15 +1,17 @@
 .container {
     background-color: #c00025;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 15px;
     border: 2px solid grey;
+    padding:1%;
     padding-bottom: 25px;
 }
 .display {
+  margin:5px;
     margin-top: 25px;
     height: 100px;
-    width: 400px;
+    width: 350px;
     border-radius: 50px;
     color: white;
     background-color: #322c2d;
@@ -17,24 +19,58 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-right: 8%;
+    padding-right: 5%;
     font-size: 5.0rem;
   }
 
-.btns-container{
+.button-container{
+  position:relative;
   display: flex;
-  /* flex-direction: column; */
-  /* grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr); */
-  width: 400px;
   padding:15px;
+  width:300px;
+}
+
+.btns-group{
+  display: flex;
+  flex-direction: column;
+  max-width:250px;
 
 }
 
 .btns{
-width:80px;
-height:80px;
-margin:5px;
+width:70px;
+height:70px;
+margin:8px;
 border-radius:100%;
+color:white;
+font-size:2rem;
 
+}
+
+.spec-buttons{
+  display:flex;
+
+}
+
+.opp-buttons{
+  display:flex;
+  flex-direction: column;
+}
+
+.num-buttons{
+  position: relative;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.num{
+  background-color:rgba(0,0,255,1);
+}
+
+.spec{
+    background-color:rgba(0,120,255,1);
+}
+
+.opp{
+    background-color:rgba(80,120,255,1);
 }

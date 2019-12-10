@@ -18,12 +18,14 @@ function App() {
       <div className="App">
 
         <Display display={displayResult}/>
-        <div className = "btns-container">
-          <Specials display={displayResult} setDisplay={setDisplay} />
-        <Numbers display={displayResult} setDisplay={setDisplay} />
-        <Operators display={displayResult} setDisplay={setDisplay} />
+        <div className="button-container">
+        <div className = "button-group">
+          <Specials display={displayResult} setDisplay={setDisplay}></Specials>
+      <Numbers display={displayResult} setDisplay={setDisplay}></Numbers>
+          </div>
 
-        </div>
+  <Operators display={displayResult} setDisplay={setDisplay}></Operators>
+</div>
       </div>
     </div>
   );

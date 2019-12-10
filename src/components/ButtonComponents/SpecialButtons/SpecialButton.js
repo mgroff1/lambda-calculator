@@ -2,9 +2,9 @@ import React from "react";
 
 const SpecialButton = (props) => {
   return (
-
-    <button className = "opp btns" >{props.text}</button>
-
+<>
+    <button className = "spec btns" >{props.text}</button>
+</>
 
   );
 };

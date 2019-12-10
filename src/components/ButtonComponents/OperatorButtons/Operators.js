@@ -8,7 +8,7 @@ function Operators(props){
 
   return (
     <div className = "opp-buttons">
-      {operatorBtn.map((item, index) =>
+      {operatorBtn.map((item, ...index) =>
         <OperatorButton key={index} setDisplay={props.setDisplay} display={props.displayResult} text={item.char} />
       )}
 
