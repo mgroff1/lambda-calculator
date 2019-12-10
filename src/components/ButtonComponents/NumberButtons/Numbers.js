@@ -9,7 +9,7 @@ function Numbers (props) {
   return (
 <div className = "num-buttons">
       {numberBtn.map ((item, ...index) =>
-        <NumberButton key={index} setDisplay={props.setDisplay} display={props.displayResult} text={item} />
+        <NumberButton key={index} incoming={props.incoming} display={props.display} text={item} />
       )}
 </div>
   );

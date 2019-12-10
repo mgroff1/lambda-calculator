@@ -10,21 +10,21 @@ import Logo from "./components/DisplayComponents/Logo";
 function App() {
 
 
-  const [displayResult, setDisplay] = useState([]);
+  const [display, incoming] = useState([]);
 
   return (
     <div className="container">
       <Logo />
       <div className="App">
 
-        <Display display={displayResult}/>
+        <Display display={display}/>
         <div className="button-container">
         <div className = "button-group">
-          <Specials display={displayResult} setDisplay={setDisplay}></Specials>
-      <Numbers display={displayResult} setDisplay={setDisplay}></Numbers>
+          <Specials display={display} incoming={incoming}></Specials>
+      <Numbers display={display} incoming={incoming}></Numbers>
           </div>
 
-  <Operators display={displayResult} setDisplay={setDisplay}></Operators>
+  <Operators display={display} incoming={incoming}></Operators>
 </div>
       </div>
     </div>
