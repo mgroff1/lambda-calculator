@@ -1,7 +1,7 @@
 .container {
     background-color: #c00025;
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
@@ -9,7 +9,7 @@
 .display {
     margin-top: 25px;
     height: 100px;
-    width: 450px;
+    width: 400px;
     border-radius: 50px;
     color: white;
     background-color: #322c2d;
@@ -20,3 +20,21 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+
+.btns-container{
+  display: flex;
+  /* flex-direction: column; */
+  /* grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr); */
+  width: 400px;
+  padding:15px;
+
+}
+
+.btns{
+width:80px;
+height:80px;
+margin:5px;
+border-radius:100%;
+
+}
