@@ -1,9 +1,11 @@
 import React from "react";
 
 const NumberButton = (props) => {
+
   return (
+
     <>
-      <button className = 'num btns' onClick={() => {
+      <button className = {`props.text` != 0 ? ` btns num`:`btns num zero`} onClick={() => {
         props.addNumber(props.text)
       }} >
         {props.text}

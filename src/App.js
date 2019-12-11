@@ -16,6 +16,12 @@ function App() {
 
   const addSpecial = (special) => {
     setDisplayValue(displayValue => displayValue + special);
+    if(special ==='C'){
+      setDisplayValue(displayValue => ' ')
+    }
+    if(special ==='+/-'){
+      setDisplayValue(displayValue => eval(-1 * displayValue));
+    }
   }
   const addOperator = (operator) => {
     if (operator === "=") {
@@ -26,18 +32,18 @@ function App() {
   };
   return (<div className="container">
     <Logo/>
-      <Display number={displayValue}/>
-          <div className='button-container'>
+    <Display number={displayValue}/>
+    <div className='button-container'>
 
-          <div className='butns-group'>
+      <div className='butns-group'>
 
-            <Specials addSpecial={addSpecial}/>
-            <Numbers addNumber={addNumber}/>
-          </div>
-
-          <Operators addOperator={addOperator}/>
-
+        <Specials addSpecial={addSpecial}/>
+        <Numbers addNumber={addNumber}/>
       </div>
+
+      <Operators addOperator={addOperator}/>
+
+    </div>
 
   </div>);
 }
