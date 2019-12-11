@@ -1,34 +1,45 @@
 import React, {useState} from "react";
 import "./App.css";
-import Numbers from './components/ButtonComponents/NumberButtons/Numbers'
-import Operators from './components/ButtonComponents/OperatorButtons/Operators'
-import Specials from './components/ButtonComponents/SpecialButtons/Specials'
-import Display from './components/DisplayComponents/Display'
 
 import Logo from "./components/DisplayComponents/Logo";
-
+import Display from './components/DisplayComponents/Display.js';
+import Numbers from './components/ButtonComponents/NumberButtons/Numbers.js';
+import Specials from './components/ButtonComponents/SpecialButtons/Specials.js';
+import Operators from './components/ButtonComponents/OperatorButtons/Operators.js';
+import './App.css'
 function App() {
 
+  const [displayValue, setDisplayValue] = useState("");
+  const addNumber = (number) => {
+    setDisplayValue(displayValue => displayValue + number);
+  }
 
-  const [display, incoming] = useState([]);
+  const addSpecial = (special) => {
+    setDisplayValue(displayValue => displayValue + special);
+  }
+  const addOperator = (operator) => {
+    if (operator === "=") {
+      setDisplayValue(displayValue => eval(displayValue));
+    } else {
+      setDisplayValue(displayValue => displayValue + operator);
+    }
+  };
+  return (<div className="container">
+    <Logo/>
+      <Display number={displayValue}/>
+          <div className='button-container'>
 
-  return (
-    <div className="container">
-      <Logo />
-      <div className="App">
+          <div className='butns-group'>
 
-        <Display display={display}/>
-        <div className="button-container">
-        <div className = "button-group">
-          <Specials display={display} incoming={incoming}></Specials>
-      <Numbers display={display} incoming={incoming}></Numbers>
+            <Specials addSpecial={addSpecial}/>
+            <Numbers addNumber={addNumber}/>
           </div>
 
-  <Operators display={display} incoming={incoming}></Operators>
-</div>
+          <Operators addOperator={addOperator}/>
+
       </div>
-    </div>
-  );
+
+  </div>);
 }
 
 export default App;

@@ -33,13 +33,13 @@
 .btns-group{
   display: flex;
   flex-direction: column;
-  max-width:250px;
+  max-width:230px;
 
 }
 
 .btns{
-width:70px;
-height:70px;
+width:60px;
+height:60px;
 margin:8px;
 border-radius:100%;
 color:white;

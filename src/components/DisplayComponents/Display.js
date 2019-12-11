@@ -1,12 +1,16 @@
 import React from "react";
-  let np = [];
-const Display = function(props) {
-for(let i =0;i<1;i++){
-  np.push(props.display);
-  console.log(np)
-}
-    return ( <div className="display">{np}</div>
-);
+
+const Display = (props) => {
+  return (
+    <div className="display">
+      {props.number}
+      {props.operators}
+    </div>
+  )
 };
 
-export default Display;
+Display.defaultProps = {
+  number: 0,
+}
+
+export default Display

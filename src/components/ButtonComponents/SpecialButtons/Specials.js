@@ -1,18 +1,18 @@
-import React, {useState} from "react";
-import {specials} from '../../../data'
-import SpecialButton from './SpecialButton'
+import React from "react";
+import SpecialButton from './SpecialButton.js';
+import { specials } from '../../../data.js';
 
-const Specials = () => {
+const Specials = (props) => {
 
-  const [specialBtn] = useState(specials)
+
   return (
-    <div className = "spec-buttons">
-      {specialBtn.map((item, index) =>
-        <SpecialButton key={index} text={item} />
+    <div className="spec-buttons">
+      {specials.map((special,index) =>
+        <SpecialButton key={index} text={special} addSpecial={props.addSpecial}/>
       )}
 
     </div>
   );
 };
 
-export default Specials;
+export default Specials
