@@ -1,9 +1,17 @@
-import React from "react";
+import SpecialButton from './SpecialButton.js';
+import { specials } from '../../../data.js';
 
-const SpecialButton = () => {
+const Specials = (props) => {
+  // STEP 2 - add the imported data to state
+
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <div className="special-div">
+      {specials.map(special =>
+        <SpecialButton text={special} addSpecial={props.addSpecial}/>
+      )}
+
+    </div>
   );
 };
+
+export default Specials
