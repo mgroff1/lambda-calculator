@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import "./App.css";
-
 import Logo from "./components/DisplayComponents/Logo";
 import Display from './components/DisplayComponents/Display.js';
 import Numbers from './components/ButtonComponents/NumberButtons/Numbers.js';
 import Specials from './components/ButtonComponents/SpecialButtons/Specials.js';
 import Operators from './components/ButtonComponents/OperatorButtons/Operators.js';
-import './App.css'
+import './App.css';
+
 function App() {
 
   const [displayValue, setDisplayValue] = useState("");
@@ -25,6 +25,7 @@ function App() {
   }
   const addOperator = (operator) => {
     if (operator === "=") {
+
       setDisplayValue(displayValue => eval(displayValue));
     } else {
       setDisplayValue(displayValue => displayValue + operator);

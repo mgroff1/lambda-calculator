@@ -1,11 +1,13 @@
 import React from "react";
-
+import {specStyles} from "./specStyle.js";
+// import {specStyle} from "./SpecStyles.js";
 const SpecialButton = (props) => {
   return (
     <>
-      <button className='btns spec' onClick={() => {
+
+      <button style={specStyles.btns} onClick={() => {
         props.addSpecial(props.text)
-      }} className="spec btns">
+      }} >
         {props.text}
       </button>
       {/* Display a button element rendering the data being passed down from the parent container on props */}

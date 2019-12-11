@@ -1,10 +1,10 @@
 import React from "react";
-
+import {oppStyles} from "./oppStyle.js";
 const OperatorButton = (props) => {
   return (
-    <button className="opp btns" onClick={() =>
+    <button style={props.text.char === '=' ? oppStyles.equal:oppStyles.btns} onClick={() =>
       props.addOperator(props.text.value)
-    } className="opp btns">
+    }>
       {props.text.char}
     </button>
   );

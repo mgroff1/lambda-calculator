@@ -1,11 +1,11 @@
 import React from "react";
-
+import {numStyles} from './numStyle.js'
 const NumberButton = (props) => {
 
   return (
 
     <>
-      <button className = {`props.text` != 0 ? ` btns num`:`btns num zero`} onClick={() => {
+      <button style={numStyles.btns} onClick={() => {
         props.addNumber(props.text)
       }} >
         {props.text}
