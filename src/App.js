@@ -12,28 +12,39 @@ function App() {
   const [displayValue, setDisplayValue] = useState("");
   const addNumber = (number) => {
     setDisplayValue(displayValue => displayValue + number);
+
   }
 
   const addSpecial = (special) => {
-    setDisplayValue(displayValue => displayValue + special);
-    if(special ==='C'){
+    setDisplayValue(displayValue => displayValue);
+
+    if (special === 'C') {
       setDisplayValue(displayValue => ' ')
     }
-    if(special ==='+/-'){
-      setDisplayValue(displayValue => eval(-1 * displayValue));
+    if (special === '+/-') {
+      let neg = -1;
+      if(displayValue){
+        setDisplayValue(parseFloat(displayValue*neg))
+      }
+    }
+
+    if(special === '%'){
+      setDisplayValue(parseFloat(displayValue*.01))
     }
   }
   const addOperator = (operator) => {
     if (operator === "=") {
-
-      setDisplayValue(displayValue => eval(displayValue));
+      setDisplayValue(displayValue => eval(displayValue).toFixed(2));
     } else {
       setDisplayValue(displayValue => displayValue + operator);
     }
   };
+
   return (<div className="container">
     <Logo/>
-    <Display number={displayValue}/>
+    <Display number={displayValue
+        ? displayValue
+        : 0}/>
     <div className='button-container'>
 
       <div className='butns-group'>

@@ -5,7 +5,7 @@ const SpecialButton = (props) => {
   return (
     <>
 
-      <button style={specStyles.btns} onClick={() => {
+      <button style={specStyles.btns} className="num" onClick={() => {
         props.addSpecial(props.text)
       }} >
         {props.text}

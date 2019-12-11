@@ -5,6 +5,7 @@ const Display = (props) => {
     <div className="display">
       {props.number}
       {props.operators}
+
     </div>
   )
 };

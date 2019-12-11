@@ -13,8 +13,16 @@ numButtons:{
   borderRadius:'100%',
   color:'black',
   fontSize:'2rem',
-  backgroundColor:'rgba(0,0,255,1)',
+  background:'blue',
+  boxShadow:'3px 2px 2px 3px black,-3px -2px 20px -3px black',
+
+
   },
+
+    // transform:'scale(1.2)',
+    // transition:'all .45s ease-in-out',
+
+
 };
 
 export default numStyles;

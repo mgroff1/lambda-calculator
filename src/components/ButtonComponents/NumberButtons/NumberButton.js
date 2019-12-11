@@ -5,7 +5,8 @@ const NumberButton = (props) => {
   return (
 
     <>
-      <button style={numStyles.btns} onClick={() => {
+
+      <button style={numStyles.btns} className="num" onClick={() => {
         props.addNumber(props.text)
       }} >
         {props.text}
